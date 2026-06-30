@@ -1,0 +1,5 @@
+module.exports = {
+    MAX_CODE_SIZE: 100000,
+    MAX_INPUT_SIZE: 10000,
+    MAX_PROJECT_NAME: 100
+}
