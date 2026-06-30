@@ -1,56 +1,16 @@
-# Code Executor
+# React + Vite
 
-A full-stack code execution app with a React frontend, Express backend, PostgreSQL for saved projects, Redis/BullMQ for job handling, and a worker that runs submitted code in Docker containers.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Requirements
+Currently, two official plugins are available:
 
-- Node.js
-- PostgreSQL
-- Redis
-- Docker
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-Docker is still required at runtime for executing submitted code. This repo does not include Docker Compose or Dockerfiles, so set up the services manually.
+## React Compiler
 
-## Backend Setup
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-```bash
-cd backend
-npm install
-cp .env.example .env
-npm start
-```
+## Expanding the ESLint configuration
 
-Create the PostgreSQL database, then run `backend/db/init.sql`.
-
-Start the worker in another terminal:
-
-```bash
-cd backend
-node workers/worker.js
-```
-
-Pull the runtime images used by the worker:
-
-```bash
-docker pull node:22-alpine
-docker pull python:3.12-slim
-docker pull gcc:14
-docker pull eclipse-temurin:21
-```
-
-## Frontend Setup
-
-```bash
-cd frontend
-npm install
-cp .env.example .env
-npm run dev
-```
-
-## Checks
-
-```bash
-cd frontend
-npm run lint
-npm run build
-```
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
