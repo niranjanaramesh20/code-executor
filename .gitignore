@@ -1,35 +1,5 @@
-# Dependencies
 node_modules/
-
-# Environment / secrets
+dist/
 .env
 .env.*
 !.env.example
-
-# Logs
-*.log
-npm-debug.log*
-yarn-debug.log*
-
-# Build output
-dist/
-build/
-
-# Runtime/generated files
-backend/temp/
-*.class
-
-# Docker files are kept local for this repo
-docker-compose.yml
-.dockerignore
-backend/.dockerignore
-frontend/.dockerignore
-backend/Dockerfile
-frontend/Dockerfile
-
-# Editor / OS
-.vscode/*
-!.vscode/extensions.json
-.idea/
-.DS_Store
-.claude
