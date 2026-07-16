@@ -18,7 +18,7 @@ const socket = io(API_URL);
 
 function CodeEditor({ projectId }) {
     const [code, setCode] = useState("");
-    const [language, setLanguage] = useState("javascript");
+    const [language, setLanguage] = useState("python");
     const [output, setOutput] = useState("");
     const [stdin, setStdin] = useState("");
     const [projectName, setProjectName] = useState("");
